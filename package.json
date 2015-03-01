@@ -1,0 +1,40 @@
+{
+  "name": "quiz-app-remix",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "yarn run-p \"dev:*\"",
+    "dev:remix": "remix vite:dev --host",
+    "dev:sass": "sass -q --no-source-map --watch styles/:app/styles",
+    "build": "yarn build:sass && remix vite:build",
+    "start": "remix-serve ./build/server/index.js",
+    "build:remix": "remix vite:build",
+    "build:sass": "sass styles/:app/styles",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint ."
+  },
+  "dependencies": {
+    "@remix-run/node": "^2.6.0",
+    "@remix-run/react": "^2.6.0",
+    "@remix-run/serve": "^2.6.0",
+    "isbot": "^4.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.6.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.70.0",
+    "vite": "^5.0.0",
+    "vite-tsconfig-paths": "^4.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

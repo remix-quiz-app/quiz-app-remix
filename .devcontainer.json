@@ -1,0 +1,29 @@
+{
+  "name": "Quiz app",
+  "image": "mcr.microsoft.com/devcontainers/base:alpine",
+
+  "postCreateCommand": "yarn",
+  "postStartCommand": "yarn && yarn dev",
+  "forwardPorts": [3000],
+
+  "features": {
+    "ghcr.io/cirolosapio/devcontainers-features/alpine-node:latest": {}
+  },
+
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker"
+  ],
+
+  "settings": {
+    "files.autoSave": "onFocusChange",
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
