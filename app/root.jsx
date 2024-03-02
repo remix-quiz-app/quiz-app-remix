@@ -5,10 +5,9 @@ import {
   Scripts,
   LiveReload,
   ScrollRestoration,
-} from "@remix-run/react";
+} from "@remix-run/react"
 
 import "~/styles/root.css?inline"
-
 
 export default function App() {
   return (
@@ -27,5 +26,5 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
-  );
+  )
 }
